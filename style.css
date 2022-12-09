@@ -1,0 +1,182 @@
+@font-face {
+    font-family: 'suzanoUnicase';
+    src: url('./fonts/SuzanoUnicase-Regular.ttf')
+    format('truetype');
+}
+@font-face {
+    font-family: 'Zooja';
+    src: url('./fonts/Zooja W00 Regular.ttf')
+    format('truetype');
+}
+@font-face {
+    font-family: 'suzanoDisplay';
+    src: url('./fonts/SuzanoDisplay-Regular.ttf')
+    format('truetype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /* Variables */
+    --slate: #f9f9f9;
+    --blue: #0072D8;
+    --green: #00B74F;
+
+    font-family: 'suzanoDisplay', sans-serif;
+}
+
+section {
+    height: 100vh;
+    background-color: var(--slate);
+
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+    justify-content: center;
+    align-items: center;
+}
+.motivo {
+    padding: 4rem;
+    width: 18rem;
+    height: 18rem;
+    background: white;
+
+    font-size: 1.25rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 9999px;    
+}
+.motivo span {
+    text-align: center;
+    font-family: 'Zooja', sans-serif;
+    font-size: 3rem;
+}
+
+.inspiracao {
+    padding-inline: 5rem;
+    text-align: center;
+}
+
+#home {
+    height: 70vh;
+    background: 
+        linear-gradient(to bottom, transparent, #00B74F),
+        url('./assets/alunos-formare.png') no-repeat right bottom;
+    background-size: cover;
+
+    display: flex;
+    align-items: end;
+}
+
+#home .logo {
+    width: 6rem;
+
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+
+}
+#home h1 {
+    margin-bottom: 40px;
+    
+    color: white;
+    text-align: center;
+    font-size: 1.875rem;
+    font-weight: 400;
+
+    font-family: 'suzanoUnicase', sans-serif;
+}
+
+
+/* ------- Gente de inspira e transforma --------- */
+#inspira-e-transforma {
+    background-color: var(--slate);
+};
+#inspira-e-transforma .motivo {
+    background: white;
+}
+#inspira-e-transforma .motivo span {
+    color: var(--blue);
+}
+
+/*-------- Gerar e compartilhar valor -------- */
+#gerar-e-compartilhar {
+    background-color: white;
+}
+#gerar-e-compartilhar .motivo {
+    background: var(--slate);
+}
+#gerar-e-compartilhar .motivo span {
+    color: var(--green);
+}
+
+/*------- Plantar o futuro -------- */
+#plantar-o-futuro {
+    background-color: var(--slate);
+}
+#plantar-o-futuro img {
+    width: 18rem;
+    height: 18rem;
+
+    border-radius: 9999px;
+}
+#plantar-o-futuro a {
+    padding: 1rem 3.5rem;
+    background-color: var(--blue);
+    color: white;
+    text-decoration: none;
+    box-shadow: 0px 4px 8px rgba(0, 114, 216, 0.4);
+
+    border-radius: 9999px;
+
+    transition: all ease 0.2s;
+}
+#plantar-o-futuro a:hover {
+    transform: scale(1.05);
+}
+
+/* Footer  */
+footer {
+    padding: 2.5rem;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+}
+footer img {
+    width: 75vw;
+}
+
+@media(min-width: 768px) {
+    .inspiracao {
+        width: 700px;
+    }
+    
+    #home {
+        padding-inline: 10rem;
+        height: 90vh;
+
+        background-image: 
+            linear-gradient(to left, transparent, #00B74F), url('./assets/alunos-formare.png');
+
+        align-items: center;
+    }
+    #home h1 {
+        width: 45vw;
+        text-align: left;
+        font-size: 3rem;
+    }
+
+    footer img {
+        width: 50vw;
+    }
+}
